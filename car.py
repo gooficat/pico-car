@@ -15,43 +15,20 @@ class Motor:
         self.p1.low()
         self.p2.low()
 
-l = Motor(0, 1)
+left = Motor(0, 1)
 
-r = Motor(2, 3)
-
-
-
-def neutral():
-    l.n()
-    r.n()
-
-def fwd():
-    l.f()
-    r.f()
-
-def bck():
-    l.b()
-    r.b()
-    
-    
-def rgt():
-    l.f()
-    r.b()
-    
-    
-def lft():
-    l.b()
-    r.f()
-
-
+right = Motor(2, 3)
 
 
 while True:
-    fwd()
-    time.sleep(1)  
-    bck()
+    left.f()
+    right.f()
     time.sleep(1)
-    lft()
+
+    left.b()
+    right.n()
     time.sleep(1)
-    rgt() 
+
+    left.n()
+    right.n()
     time.sleep(1)
