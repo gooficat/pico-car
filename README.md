@@ -9,7 +9,7 @@ make a folder on the pico called `ir_rx`
 
 make files in that folder, called:
 `__init__.py` (that is two underscores either side)
-`nec_8.py`
+`nec.py`
 `print_error.py`
 
 copy the code for those files, from the subdirectory `ir_rx` in this repository,
