@@ -1,16 +1,9 @@
 Raspberry Pi Pico-based Robot Cars programmed in MicroPython.
 
-For the mecanum wheel car with the IR remote, here is what you need to do:
+This project contains the code for my 2 robot car designs.
 
-add a file called `main.py` to the pi pico
-paste the code in `mecanum_ir.py`
+Each folder contains all the necessary files and folders to run its respective car design.
 
-make a folder on the pico called `ir_rx`
+Licenses for any libraries used are also contained in the folder.
 
-make files in that folder, called:
-`__init__.py` (that is two underscores either side)
-`nec.py`
-`print_error.py`
-
-copy the code for those files, from the subdirectory `ir_rx` in this repository,
-https://github.com/peterhinch/micropython_ir
+You should have basic knowledge of how to upload files onto your pi pico.
