@@ -21,10 +21,10 @@ enb.freq(1000)
 neck.freq(50)
 
 min_duty = 1638
-max_duty = 7864
-half_duty = int(max_duty/2)
+max_duty = 8192
+half_duty = 4915
 
-speed = 100000
+speed = 50000
 
 def fwd():
     ena.duty_u16(speed)
@@ -74,10 +74,9 @@ def get_dist():
             return 100
     while echo.value() == 1:
         signalon = utime.ticks_us()
+
     
-    timepassed = signalon - signaloff
-    dist = (timepassed * 0.0343) / 2
-    return dist
+    return (utime.ticks_diff(utime.ticks_us(), start) * 0.0343) / 2
 
 while True:
     dis = get_dist()
